@@ -8,15 +8,15 @@ public class BikeRide {
         this.bicycle = bicycle;
 
     }
-
-    public static void main(String[] args) {
-        Bicycle bicycle = new Bicycle();
-        BikeRide bikeRide = new BikeRide(bicycle);
-        bikeRide.ride();
-
-        //used function that tells me the bike's current speed
-        System.out.println("The current speed is " + bicycle.currentSpeed());
-    }
+//
+//    public static void main(String[] args) {
+////        Bicycle bicycle = new Bicycle();
+////        BikeRide bikeRide = new BikeRide(bicycle);
+////        bikeRide.ride();
+////
+////        //used function that tells me the bike's current speed
+////        System.out.println("The current speed is " + bicycle.currentSpeed());
+//    }
 
 
     public void ride() {
