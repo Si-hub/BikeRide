@@ -5,11 +5,13 @@ public class Bicycle {
     private int speed;
 
     public void accelerate() {
-        speed = 5;
+        //method must increase the speed "+"
+        speed += 5;
     }
 
     public void brake(){
-        speed = 3;
+        //method must decrease the speed "-"
+        speed -= 3;
     }
 
     public void stop(){
