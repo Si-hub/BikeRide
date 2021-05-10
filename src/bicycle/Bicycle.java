@@ -1,4 +1,4 @@
-package bicycles;
+package bicycle;
 
 public interface Bicycle {
 
@@ -26,9 +26,6 @@ public interface Bicycle {
 //    public int currentSpeed(){
 //        return speed;
 //    }
-//
-//    public static void main(String[] args) {
-//	// write your code here
 //
 //    }
 
