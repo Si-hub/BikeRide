@@ -13,12 +13,10 @@ public class MountainBike extends BicycleBase {
         this.changeSpeed(-3);
     }
 
-    @Override
     public int currentSpeed() {
         return this.currentSpeed();
     }
 
-    @Override
     public BicycleType bicycleType() {
         return BicycleType.MountainBike;
     }
