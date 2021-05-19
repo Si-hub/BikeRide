@@ -14,7 +14,7 @@ public class Tandem extends BicycleBase {
         this.changeSpeed(-7);
     }
 
-    public BicycleType bicycleType() {
+    public BicycleType getBicycleType() {
         return BicycleType.Tandem;
     }
 }

@@ -10,7 +10,7 @@ public interface Bicycle {
 
     public void stop();
 
-    BicycleType bicycleType();
+    BicycleType getBicycleType();
 }
 /*
     private int speed;

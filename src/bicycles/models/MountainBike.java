@@ -17,7 +17,7 @@ public class MountainBike extends BicycleBase {
         return this.currentSpeed();
     }
 
-    public BicycleType bicycleType() {
+    public BicycleType getBicycleType() {
         return BicycleType.MountainBike;
     }
 

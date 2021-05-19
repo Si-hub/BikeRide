@@ -1,63 +1,48 @@
 
 package bicycles;
 
-import bicycles.models.MountainBike;
-import bicycles.models.RoadBike;
-import bicycles.models.Tandem;
-
 import java.util.ArrayList;
 
 public class FunRide {
+    // an array list of bicycle type
     private ArrayList<Bicycle> BikeList = new ArrayList<Bicycle>();
-    private BicycleType bicycle;
     private int maxNoOfBikes;
-    private  int mountainBikeCount;
-    private int rodeBikeCount;
-    private int tandemCount;
+
 
     //create constructor should specify the maximum number of bikes that can enter the FunRide
     public FunRide(int maxNoOfBikes) {
         this.maxNoOfBikes = maxNoOfBikes;
     }
 
-    public void accept(Bicycle bicycle){
+    public String accept(Bicycle bicycle){
+        String accepted = "accepted";
+        String rejected = "rejected";
+
         if(BikeList.size() < maxNoOfBikes ){
-            if(bicycle instanceof MountainBike){
-               mountainBikeCount++;
-            }else if(bicycle instanceof RoadBike){
-                rodeBikeCount++;
-            }else if(bicycle instanceof Tandem){
-                tandemCount++;
-            }
             BikeList.add(bicycle);
+            return accepted;
         }else{
-            System.out.println("You have reached the maximum number of bikes");
+            return rejected;
         }
-
-
     }
 
     public int getCountForType(BicycleType bicycle){
-       if(bicycle == BicycleType.MountainBike){
-           return mountainBikeCount;
-       }else{
-           return 0;
-       }
+       int bikeCount = 0;
 
+        // iterating through an arraylist of bikeType using the for-each loop
+        for(Bicycle item : BikeList) {
+            if(item.getBicycleType() == bicycle){
+                bikeCount++;
+            }
+
+        }
+
+       return bikeCount;
     }
 
     public int getEnteredCount(){
         return BikeList.size();
     }
 
-    public static void main(String[] args) {
-        FunRide fun = new FunRide(2);
-//        fun.accept(new RoadBike());
-        fun.accept(new MountainBike());
-        fun.accept(new MountainBike());
-        System.out.println(fun.getCountForType( BicycleType.MountainBike));
-//        fun.accept(new Tandem());
-//        System.out.println(fun.getEnteredCount());
-    }
 
 }
