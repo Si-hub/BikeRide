@@ -31,7 +31,7 @@ public class FunRide {
 
         // iterating through an arraylist of bikeType using the for-each loop
         for(Bicycle item : BikeList) {
-            if(item.getBicycleType() == bicycle){
+            if(item.getBicycleType().equals(bicycle)){
                 bikeCount++;
             }
 
